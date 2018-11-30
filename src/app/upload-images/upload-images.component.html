@@ -1,0 +1,86 @@
+<div class="container-image-upload col-md-12 row">
+  <div class="upload-images col-md-8">
+    <div class="upload-column ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="title">
+            <h5>UPLOAD IMAGES</h5>
+          </div>
+        </div>
+      </div>
+      <form [formGroup]="uploadForm">
+        <div class="row">
+          <div class="col-md-6 upload-form">
+            <mat-form-field class="upload-form">
+              <input required matInput placeholder="What's my name?" formControlName="name" (keyup)="toUpperCase('name')">
+              <mat-error>This is a required field</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field class="upload-form upload-form-category">
+              <input required matInput placeholder="Which category do I belong to?" formControlName="category" (keyup)="toUpperCase('category')">
+              <mat-error>This is a required field</mat-error>
+
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 upload-image">
+            <input type="file" #file style="display: none" (change)="uploadImage($event)" multiple />
+            <button mat-raised-button (click)="file.click()">Upload</button>
+          </div>
+        </div>
+        <div class="row progress-bars" *ngIf="value!=0">
+          <div class="col-md-6">
+            <label for="" *ngIf="value>0 && value!=100">Uploading Image : {{uploadingFileName | titlecase}}</label>
+            <label for="" *ngIf="value==100 && !isImageUploaded">Please wait....</label>
+            <label for="" *ngIf="value==100 && isImageUploaded">Image Uploaded Successfully..</label>
+            <label for="" *ngIf="value==100"></label>
+            <mat-progress-bar class="example-margin" [color]="color" [mode]="mode" [value]="value" [bufferValue]="bufferValue">
+            </mat-progress-bar>
+            <label>{{progressInPercentage()}} %</label>
+          </div>
+
+
+        </div>
+
+
+        <div class="row submit-button">
+          <div class="col-md-3">
+            <button mat-raised-button color="warn" type="button" (click)="save()">Submit</button>
+
+          </div>
+        </div>
+        <br>
+        <br>
+      </form>
+
+
+    </div>
+
+
+
+
+  </div>
+  <div class="recently-uploaded-images col-md-4">
+    <h5>RECENTLY UPLOADED IMAGES</h5>
+    <div class="loading-records" align="center" *ngIf="listOfUploadedRecords.length==0 && loadingRecords">
+        <mat-progress-spinner 
+        class="example-margin"
+        [color]="spinnerColor" 
+        [mode]="spinnerMode"
+        [value]="spinnderValue"
+        [diameter]="50"  
+        > 
+    </mat-progress-spinner>
+    </div>
+
+    <mat-list>
+      <div class="record" *ngFor="let record of listOfUploadedRecords">
+        <mat-list-item (click)="view(record.imageID)">{{record?.name}}</mat-list-item>
+      </div>
+    </mat-list>
+  </div>
+</div>

@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'prabhanjan-photography';
+  getBackgroundImageURL(){
+    return "url('./assets/temp-home-background.jpg')";
+  
+  }
 }

@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.upload-form.mat-form-field-appearance-legacy .mat-form-field-underline,
+.upload-form.mat-form-field-appearance-legacy .mat-form-field-ripple,
+.upload-form.mat-form-field-appearance-legacy.mat-focused
+	.mat-form-field-underline,
+.upload-form.mat-form-field-appearance-legacy.mat-focused
+	.mat-form-field-ripple { 
+	background-color: white;
+}  
+ 
+
+/** Overrides label color **/
+.upload-form.mat-form-field-appearance-legacy .mat-form-field-label,
+.upload-form.mat-form-field-appearance-legacy.mat-focused
+	.mat-form-field-label {
+    color: grey;
+    font-family: fantasy;
+}
+
+/** Overrides caret & text color **/
+.upload-form.mat-form-field-appearance-legacy .mat-input-element {
+	caret-color: red;
+  color: red;
+}
+

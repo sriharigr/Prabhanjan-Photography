@@ -1,0 +1,10 @@
+.navbar{
+height: 4em;
+}
+
+.brand { 
+    color: white;
+    font-family: 'Marcellus SC', serif;
+    font-size: 25px;
+    font-weight: bold;
+ }   
