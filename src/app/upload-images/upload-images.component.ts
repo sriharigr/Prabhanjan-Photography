@@ -17,9 +17,7 @@ export class UploadImagesComponent implements OnInit {
   color = 'warn';
   mode = 'determinate';
   value = 0;
-  spinnerColor = 'primary';
-  spinnerMode = 'indeterminate';
-  spinnerValue = 50;
+
   bufferValue = 0;
   listOfUploadedRecords: any = [];
   uploadingFileName: string = '';
@@ -37,14 +35,7 @@ export class UploadImagesComponent implements OnInit {
   }
 
   ngOnInit() {
- this.uploadImageService.getRecords().subscribe((response: any) => {
-   this.loadingRecords = false;
-      this.listOfUploadedRecords = response.map((item) => {
-        return {
-          ...item.payload.val()
-        };
-      }); 
-    })
+
   }
 
   initForm() {
@@ -107,7 +98,5 @@ export class UploadImagesComponent implements OnInit {
   }
 
 
-  view(imageID){
-    console.log(imageID);
-  }
+  
 }

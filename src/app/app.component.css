@@ -1,14 +1,9 @@
 .container-fluid{
-    height: 100vh;
-    background-size: cover;
-    position: relative;
     overflow-x:hidden;
 
 }
-::-webkit-scrollbar {display:none;}
+::-webkit-scrollbar {display:none;} 
 
-app-upload-images{
-    position: relative;
-    top: 4em; 
-    left: 2em; 
+.router-components{
 }
+

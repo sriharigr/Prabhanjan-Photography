@@ -7,6 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import {AngularFireAuthModule } from '@angular/fire/auth'; 
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
@@ -21,13 +22,22 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { environment } from '../environments/environment'; 
 import { NotifyComponent } from './notify/notify.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { PreviewImageComponent } from './preview-image/preview-image.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { AuthGuardService } from './security/auth-guard.service';
+import { AuthenticationService } from './security/authentication.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [  
     AppComponent, 
     HeaderComponent,
     UploadImagesComponent,
-    NotifyComponent
+    NotifyComponent,
+    PreviewImageComponent,
+    HomePageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
@@ -40,14 +50,16 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatListModule,
     FormsModule,
     MatSnackBarModule,
+    HttpClientModule,
     MatProgressBarModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.config),
     AngularFireDatabaseModule,
     AngularFireStorageModule,
+    AngularFireAuthModule,
     MatProgressSpinnerModule
   ],
-  providers: [NotifyComponent],
+  providers: [NotifyComponent, AuthGuardService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

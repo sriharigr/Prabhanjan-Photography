@@ -1,0 +1,10 @@
+.success-failure{position: absolute;
+    top:10%;
+    width:25%;
+    border-radius:0.5rem !important;
+    color: #EEC600;right:36%;
+    background:#292626; padding: 18px 20px !important;text-align:center;
+    }  
+ 
+  
+    .mat-simple-snackbar-action{color: #ffc107;font-weight: bold;}

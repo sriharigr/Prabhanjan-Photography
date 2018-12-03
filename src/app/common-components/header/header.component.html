@@ -1,8 +1,20 @@
-<nav class="navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="brand">
-      <a>
-          Prabhanjan Photography
-        </a>  
+    <a (click)="navigate('home')">
+      Prabhanjan Photography
+    </a>
   </div>
-
+  <div class="navbar-items" id="">
+    <ul class="navbar-nav">
+      <li class="nav-item upload">
+        <a class="nav-link" (click)="navigate('login')" *ngIf="!isUserLoggedIn"> Login</a>
+      </li>
+      <li class="nav-item upload">
+        <a class="nav-link" (click)="logout()" *ngIf="isUserLoggedIn"> Logout</a>
+      </li>
+      <li class="nav-item contact">
+        <a class="nav-link" (click)="navigate('')"> Contact Us</a>
+      </li>
+    </ul>
+  </div>
 </nav>

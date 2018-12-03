@@ -1,0 +1,12 @@
+.login-page{
+    /* padding: 3em; */
+    float: none;
+    margin-top: 10em;
+}
+
+.login-page mat-form-field{
+    width: 100%;
+}
+.submit-button button{
+    float: right;
+}

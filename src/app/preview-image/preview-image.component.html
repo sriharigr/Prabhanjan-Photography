@@ -1,0 +1,31 @@
+
+<div class="uploaded-records" >
+    <div class="loading-records" align="center" *ngIf="listOfUploadedRecords.length==0 && loadingRecords">
+        <mat-progress-spinner 
+        class="example-margin"
+        [color]="spinnerColor" 
+        [mode]="spinnerMode"
+        [value]="spinnderValue"
+        [diameter]="50"  
+        > 
+    </mat-progress-spinner>
+    </div>
+<mat-list> 
+  <div class="record" *ngFor="let record of listOfUploadedRecords" >
+    <mat-list-item (click)="view(record.imageID)">
+      <button type="button" class="btn btn-primary" align="right" data-toggle="modal" data-target="#exampleModalCenter">
+          &nbsp;&nbsp;<i class="fa fa-image"></i>  &nbsp; {{record.name}}
+      </button>
+    </mat-list-item>
+  </div>
+</mat-list>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-body">
+        <img src="{{selectedImageURL}}" alt="">
+      </div>
+  </div>
+    </div>
+  </div>
+
+   

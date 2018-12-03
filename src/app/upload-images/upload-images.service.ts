@@ -34,6 +34,9 @@ export class UploadImagesService {
 
   getRecords() {
     return this.list.snapshotChanges();
+  }
 
+  getImage(imageID){
+   return this.firebaseStorage.ref(imageID).getDownloadURL();
   }
 }

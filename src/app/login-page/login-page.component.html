@@ -1,0 +1,26 @@
+<div class="display-login-page row">
+  <div class="col-md-4"></div>
+    <div class="login-page col-md-4">
+      <div class="title col-md-12">
+          <h4>Admin Login</h4>
+
+      </div>
+        <form [formGroup]="loginForm">
+            <div class="emailId col-md-12">
+                <mat-form-field class="example-full-width">
+                    <input matInput formControlName="emailId" id="emailId" placeholder="Email">
+                </mat-form-field>
+              </div>
+              <div class="password col-md-12">
+                  <mat-form-field class="example-full-width">
+                      <input matInput  type="password" formControlName="password" id="password" placeholder="Password">
+                  </mat-form-field>
+                </div>
+       <div class="submit-button col-md-12">
+          <button mat-raised-button align="center" type="submit" (click)="login()">Login</button>
+       </div>
+        </form>
+      
+      </div>  
+      <div class="col-md-4"></div>
+</div>

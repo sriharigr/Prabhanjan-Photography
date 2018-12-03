@@ -1,0 +1,15 @@
+.main-data{
+    color: white; 
+    font-family: 'Baloo Tamma', cursive;
+   background-image:  url("../../assets/temp-home-background.jpg");
+   height: 100vh;
+   width: 100vw;  
+   background-size: cover;
+   overflow-x:hidden;
+   overflow-y:hidden;
+ 
+} 
+::-webkit-scrollbar {display:none;} 
+.notification{
+    margin-top: 2em;
+}

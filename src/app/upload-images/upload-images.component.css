@@ -1,12 +1,29 @@
+.container-image-upload{
+    background-color:  #252839;
+    height: 100vh;
+    /* width: 100vw;   */
+    background-size: cover;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+.visual-data{
+    /* background-imag e: url('../../assets/blank-clean-color.jpg');  */
+    margin-top: 6em;
+
+}
+
+::-webkit-scrollbar {display:none;} 
+
+
 .title h5{
-    color: white;
     font-family: 'Nixie One', cursive;
     font-weight: 700;
+    color: white;
 }
 
 
 mat-form-field{
-    width: 70%; 
+    width: 100%; 
 }
 .progress-bars{
     margin-top: 1em;
@@ -17,6 +34,10 @@ mat-form-field{
 .upload-image{
 margin-top: 1em;
 }
+.upload-image mat-hint{
+    font-size: 12px;
+    color: white;
+}
 .progress-bars label{
     color: white;
     font-size: 12px;
@@ -25,17 +46,22 @@ margin-top: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.record mat-list-item{
-    color: orange;
-    font-family: 'Cabin Sketch', cursive;
-    cursor: pointer;
-}
+
 .recently-uploaded-images h5{
-    color: white;
     font-family: 'Nixie One', cursive;
     font-weight: 700;
     font-size: 20px;
+    color: white;
 }
 .loading-records{
     margin-top: 5em;
-}
+}  
+@media only screen and (max-width: 600px) {
+    .visual-data{
+         margin-top: 3em;
+    
+    }
+    .recently-uploaded-images h5{
+        font-size: 15px;
+    }
+ }

@@ -4,7 +4,7 @@ import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 @Component({
   selector: 'app-notify',
   templateUrl: './notify.component.html',
-  styleUrls: ['./notify.component.scss',
+  styleUrls: ['./notify.component.css',
 ],  encapsulation: ViewEncapsulation.None
 
 })

@@ -1,0 +1,31 @@
+.btn-primary{
+background: none; 
+border: none;
+color: white;
+    /* font-family: 'Cabin Sketch', cursive; */
+    font-family: 'Sedgwick Ave', cursive;
+    cursor: pointer;
+}
+.modal-body img{
+    max-width:50;
+    max-height:17em;
+    width: auto;
+    height: auto;
+}
+ 
+.btn-primary span{
+    font-size: 20px;
+}
+::-webkit-scrollbar {display:none;} 
+
+@media only screen and (max-width: 600px) {
+   .modal-body img{
+    object-fit: cover;
+    max-width:38em;
+    max-height:15em;
+    width: auto;
+    height: auto;
+    /* margin-left: 2em;  */
+   } 
+ 
+} 

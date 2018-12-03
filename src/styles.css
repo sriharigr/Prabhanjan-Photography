@@ -7,7 +7,7 @@
 .upload-form.mat-form-field-appearance-legacy.mat-focused
 	.mat-form-field-ripple { 
 	background-color: white;
-}  
+}   
  
 
 /** Overrides label color **/
@@ -20,7 +20,7 @@
 
 /** Overrides caret & text color **/
 .upload-form.mat-form-field-appearance-legacy .mat-input-element {
-	caret-color: red;
-  color: red;
+	caret-color: white;
+  color: white;
 }
 

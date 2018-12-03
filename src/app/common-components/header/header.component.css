@@ -1,10 +1,37 @@
 .navbar{
-height: 4em;
+height: auto;
+background-color: white;
+
 }
 
 .brand { 
-    color: white;
+    color: black;
     font-family: 'Marcellus SC', serif;
     font-size: 25px;
     font-weight: bold;
  }   
+ .contact{
+    color: black;
+    font-family: 'Marcellus SC', serif;
+    font-size: 20;
+    font-weight: bold;
+ }
+ .upload{
+    color: black; 
+    font-family: 'Marcellus SC', serif;
+    font-size: 20;
+    font-weight: bold;
+ }
+
+ .brand a{
+     cursor: pointer; 
+ }
+ .navbar-items{
+     margin-left: 2em;
+ }
+ @media only screen and (max-width: 600px) {
+    .navbar-items{
+        margin-left: 0;
+    }
+  
+ } 
